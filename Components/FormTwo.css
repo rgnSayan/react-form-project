@@ -1,0 +1,102 @@
+@media screen and (max-width: 600px) {
+  .formTwo {
+    width: 300px;
+    margin-right: 0;
+  }
+}
+
+.formTwo__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+}
+.label__nameNew > label {
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 48.05px;
+  text-align: justify;
+  font-family: Roboto;
+  margin-left: 270px;
+}
+
+.label__inputNew {
+  display: flex;
+  align-items: center;
+}
+
+.label__inputNew > input {
+  padding: 20px;
+  width: 360px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.label__inputNew > button {
+  background-color: #394e99;
+  padding: 15px 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 30px 0px;
+  margin-left: 10px;
+  border-radius: 10px;
+  margin-right: 170px;
+}
+
+.formTwo__button > a > button {
+  background-color: #394e99;
+  padding: 15px 70px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 30px 0px;
+  border-radius: 10px;
+}
+
+.formTwo__button {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .container > form > .formTwo__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formTwo__button {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .formTwo__button > a > button {
+    padding: 10px 20px;
+    margin: 5px 10px;
+    display: flex;
+  }
+  .label__nameNew {
+    flex: 0.5;
+  }
+
+  .label .label__nameNew {
+    flex: 0.5;
+  }
+  _inputNew {
+    display: flex;
+    flex-direction: column;
+  }
+  .label__inputNew > input {
+    width: 105%;
+    margin: 0px 5px;
+    margin-right: 0;
+  }
+  .label__inputNew > button {
+    display: flex;
+    margin-left: 50px;
+  }
+  .label__nameNew > label {
+    padding-left: 50px;
+  }
+}

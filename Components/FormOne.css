@@ -1,0 +1,191 @@
+.step {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.stepper-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 7px solid black;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 7px solid black;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 6px;
+}
+
+.stepper-item.active {
+  font-weight: bold;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: #2893c1;
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 7px solid #2893c1;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+
+@media screen and (max-width: 600px) {
+  .step {
+    margin-left: 20px;
+  }
+  .formOne {
+    width: 300px;
+    margin-right: 0;
+  }
+}
+
+.formOne__form {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.label__name > label {
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 48.05px;
+  text-align: justify;
+  font-family: Roboto;
+  margin-left: 400px;
+}
+
+.label__name {
+  flex: 0.5;
+}
+.label__input {
+  flex: 0.5;
+}
+
+.label__input > input {
+  padding: 20px;
+  width: 550px;
+  border-radius: 10px;
+  outline: none;
+  margin-right: 300px;
+}
+
+.label__input > select {
+  padding: 20px;
+  width: 590px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid black;
+  overflow-y: scroll;
+  margin-right: 303px;
+}
+
+.label__input > select > option {
+  font-size: 20px;
+  font-family: Roboto;
+  font-weight: bold;
+  overflow: scroll;
+}
+.formOne__button > a > button {
+  background-color: #394e99;
+  padding: 15px 70px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 30px 0px;
+  border-radius: 10px;
+}
+
+.formOne__button {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 250px;
+  }
+
+  .container > form > .formOne__form {
+    display: flex;
+    flex-direction: column;
+  }
+  .label__name > label {
+    display: flex;
+    margin-left: 5px;
+  }
+
+  .label__name,
+  .label__input,
+  .label__input > input {
+    width: 104%;
+    margin: 0px 5px;
+  }
+
+  .label__input > select {
+    width: 122%;
+    margin: 0px 4px;
+  }
+
+  .formOne__button {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .formOne__button > a > button {
+    padding: 10px 20px;
+    margin: 5px 10px;
+    display: flex;
+    /* width: 50%; */
+  }
+}
